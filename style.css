@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #242424;
+    background: #f5f6fa;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: black;
+}
+
+.navbar .logo {
+    width: 115px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px 12px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: orangered;
+}
+
+/* HOME SECTION */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+
+    position: relative;
+    overflow: hidden;
+    background: #f5f6fa;
+}
+
+/* INTRODUCTION */
+.info {
+    position: absolute;
+    left: 10%;
+    top: 36%;
+    width: 45%;
+    z-index: 2;
+}
+
+.info h3 {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.info h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.15;
+    margin: 5px 0 12px;
+    color: #242424;
+}
+
+.info span,
+.section h1 span {
+    color: orangered;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 22px;
+
+    background: #242424;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: orangered;
+}
+
+/* PROFILE PICTURE */
+.gwapo {
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    right: 5%;
+    bottom: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.gwapo .boy {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+/* ABOUT, SKILLS, WORKS, CONTACT */
+.section {
+    min-height: 100vh;
+    padding: 140px 10% 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    scroll-margin-top: 0;
+    background: #ffffff;
+}
+
+.section.alternate {
+    background: #eceff5;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.section h1 {
+    font-size: clamp(35px, 5vw, 50px);
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #555;
+}
+
+/* SKILLS */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.skill {
+    padding: 18px 25px;
+    background: white;
+    border-left: 4px solid orangered;
+    border-radius: 5px;
+
+    box-shadow: 0 3px 12px #00000010;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    padding: 22px;
+    text-align: center;
+    background: #242424;
+    color: white;
+    font-size: 13px;
+}
+
+/* SMALLER SCREENS */
+@media (max-width: 800px) {
+    .navbar {
+        min-height: 100px;
+        padding: 10px 3%;
+        gap: 5px;
+    }
+
+    .navbar .logo {
+        width: 70px;
+    }
+
+    .navbar ul {
+        gap: 0;
+    }
+
+    .navbar ul li a {
+        padding: 7px 5px;
+        font-size: 10px;
+    }
+
+    .main {
+        min-height: 900px;
+    }
+
+    .info {
+        left: 7%;
+        top: 180px;
+        width: 86%;
+    }
+
+    .info h1 {
+        font-size: 44px;
+    }
+
+    .info h3 {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .gwapo {
+        width: 75%;
+        height: 390px;
+        right: 0;
+        bottom: 0;
+    }
+
+    .gwapo .boy {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .section {
+        padding: 140px 7% 60px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+}
+.contact {
+    min-height: 70vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+
+.contact h1 {
+    font-size: 45px;
+    color: #354052;
+    margin-bottom: 20px;
+}
+
+.contact h1 span {
+    color: orangered;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social {
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.instagram {
+    background-color: #C13584;
+}
+
+.gmail {
+    background-color: #D93025;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+.phone {
+    background-color: #198754;
+}
+
